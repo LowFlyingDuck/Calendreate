@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="./p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <form onchange="javascript: update()" id="numbers">
+      <label for="padding">Bild Skala (0-1)</label>
+      <input value="0.9" type="number" id="padding">
+
+      <label for="imageMargin">Abstand (Bild und Tage)</label>
+      <input value="50" type="number" id="imageMargin">
+
+      <label for="boxHeight">Höhe der Boxen</label>
+      <input value="150" type="number" id="boxHeight">
+
+      <label for="boxPadding">Innenabstand Monat</label>
+      <input value="40" type="number" id="boxPadding">
+
+      <label for="monthBoxExtent">Rechter Abstand Monat</label>
+      <input value="60" type="number" id="monthBoxExtent">
+    </form>
+    <form onchange="javascript: update()" id="params">
+      <label for="colour">Hintergrundfarbe (HEX)</label>
+      <input type="text" value="#091F0C" id="colour">
+
+      <label for="images">Bilder</label>
+      <input id="files" type="file" multiple>
+    </form>
+    <button onclick="javascript: try { load() } catch(err) { alert(); }">ANZEIGEN</button>
+    <button onclick="javascript: ex()">HERUNTERLADEN</button>
+    <script src="./s.js"></script>
+  </body>
+</html>

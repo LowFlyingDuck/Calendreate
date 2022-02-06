@@ -1,0 +1,15 @@
+{
+  "name": "Calendreate",
+  "version": "2.0.0",
+  "description": "Make Calendars!",
+  "main": "index.js",
+  "author": "Nils Schwebel",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^17.0.0",
+    "express": "^4.17.2"
+  }
+}
